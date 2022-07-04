@@ -17,8 +17,6 @@ function onFormSubmit(e) {
     if (e.currentTarget.elements.email.value === "" || e.currentTarget.elements.message.value === "") {
     alert("Please, fill in all the fields!")
     }
-    
-    formData = {};
 
     e.currentTarget.reset();
 
