@@ -13,8 +13,7 @@ saveFormData();
 
 function onFormSubmit(e) {
     e.preventDefault();
-    formData = {};
-
+    
     if (e.currentTarget.elements.email.value === "" || e.currentTarget.elements.message.value === "") {
     alert("Please, fill in all the fields!")
     }
@@ -24,9 +23,12 @@ function onFormSubmit(e) {
     localStorage.removeItem(FEEDBACK);
 
     console.log(formData); 
+    
+    formData = {};
  };
 
 function onFormInput(event) {
+    
     formData[event.target.name] = event.target.value;
 
     const formInputData = JSON.stringify(formData);
